@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.AfinamientosController">
+   <top>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="1070.0" fitWidth="1920.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FondoAfinamientos.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1290.0" layoutY="213.0" text="Brazo:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="1290.0" layoutY="303.0" text="Posición:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="1291.0" layoutY="393.0" text="Jornada:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="1290.0" layoutY="483.0" text="Estado inicial:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="1290.0" layoutY="573.0" text="Detalles:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="detalles" layoutX="1290.0" layoutY="629.0" prefHeight="100.0" prefWidth="400.0" />
+            <ChoiceBox fx:id="brazo" layoutX="1290.0" layoutY="253.0" prefHeight="50.0" prefWidth="400.0" stylesheets="@choiceBox.css" />
+            <ChoiceBox fx:id="posicion" layoutX="1290.0" layoutY="343.0" prefHeight="50.0" prefWidth="400.0" stylesheets="@choiceBox.css" />
+            <ChoiceBox fx:id="jornada" layoutX="1290.0" layoutY="433.0" prefHeight="50.0" prefWidth="400.0" stylesheets="@choiceBox.css" />
+            <ChoiceBox fx:id="estadoInicial" layoutX="1290.0" layoutY="523.0" prefHeight="50.0" prefWidth="400.0" stylesheets="@choiceBox.css" />
+            <TableView fx:id="tablaAfinamientos" layoutX="56.0" layoutY="204.0" prefHeight="592.0" prefWidth="1141.0" stylesheets="@tablas.css">
+               <columns>
+                  <TableColumn fx:id="columnaFechaAfinamiento" prefWidth="116.0" text="Fecha" />
+                  <TableColumn fx:id="columnaPesoAfinamiento" prefWidth="62.000030517578125" text="Peso" />
+                  <TableColumn fx:id="columnaPosicionAfinamiento" prefWidth="73.0" text="Posición" />
+                  <TableColumn fx:id="columnaJornadaAfinamiento" prefWidth="74.0" text="Jornada" />
+                  <TableColumn fx:id="columnaDiastolicaAfinamiento" prefWidth="85.0" text="Diastólica" />
+                  <TableColumn fx:id="columnaSistolicaAfinamiento" prefWidth="72.0" text="Sistólica" />
+                  <TableColumn fx:id="columnaGrasaAfinamiento" prefWidth="79.0" text="Grasa corporal" />
+                  <TableColumn fx:id="columnaAguaAfinamiento" prefWidth="98.0" text="Porcentaje de agua" />
+                  <TableColumn fx:id="columnaMuscularAfinamiento" prefWidth="89.0" text="Masa muscular" />
+                  <TableColumn fx:id="columnaIMCAfinamiento" prefWidth="65.0" text="IMC" />
+                  <TableColumn fx:id="columnaEstadoAfinamiento" prefWidth="109.0" text="Estado inicial" />
+                  <TableColumn fx:id="columnaDetallesAfinamiento" prefWidth="218.0" text="Detalles" />
+               </columns>
+            </TableView>
+            <Button fx:id="buscarPaciente" layoutX="1627.0" layoutY="29.0" mnemonicParsing="false" onAction="#cargarBusquedaPaciente" prefHeight="88.0" prefWidth="88.0" text="Buscar Paciente" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="guardarAfinamiento" layoutX="1342.0" layoutY="745.0" mnemonicParsing="false" onAction="#almacenarAfinamiento" prefHeight="64.0" prefWidth="280.0" textAlignment="CENTER">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonHome" layoutX="250.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAHome" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSave" layoutX="365.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAGuardar" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonConnection" layoutX="480.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAConexion" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonHelp" layoutX="596.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAAyuda" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSmartcard" layoutX="712.0" layoutY="23.0" mnemonicParsing="false" onAction="#iniciarDesdeTarjeta" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="consultaCentrosMedicos" layoutX="824.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirCentrosMedicos" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="consultarFarmacias" layoutX="1162.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirFarmacias" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="consultaEspecialistas" layoutX="1048.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirEspecialistas" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="medicionesAnteriores" layoutX="1279.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirMedicionesAnteriores" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <ImageView fx:id="imagenUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="-1.0" layoutY="-2.0" onMouseReleased="#abrirAdminSesion" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosEstructura/usuario.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="medicamentos" layoutX="937.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirMedicamentos" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonWavesSection" layoutX="1758.0" layoutY="155.0" mnemonicParsing="false" onAction="#irAOndas" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPressureSection" layoutX="1758.0" layoutY="293.0" mnemonicParsing="false" onAction="#irAAfinamiento" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPersonalData" layoutX="1758.0" layoutY="432.0" mnemonicParsing="false" onAction="#irADatosPersonales" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonVariabilidad" layoutX="1758.0" layoutY="571.0" mnemonicParsing="false" onAction="#irAVariabilidad" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonConfiguration" layoutX="1758.0" layoutY="847.0" mnemonicParsing="false" onAction="#irAAjustes" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonWearables" layoutX="1758.0" layoutY="709.0" mnemonicParsing="false" onAction="#irAWearables" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="tomarPresionOndas" layoutX="45.0" layoutY="890.0" mnemonicParsing="false" prefHeight="173.0" prefWidth="329.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <padding>
+                  <Insets bottom="60.0" />
+               </padding>
+            </Button>
+            <Text layoutX="94.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presión media">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="presionMedia" layoutX="128.0" layoutY="1049.0" strokeType="OUTSIDE" strokeWidth="0.0" text="96">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="259.0" layoutY="1015.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pulso">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="presionLabel" layoutX="111.0" layoutY="981.0" strokeType="OUTSIDE" strokeWidth="0.0" text="120/80">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="117.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presion arterial">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="120.0" fitWidth="5.0" layoutX="231.0" layoutY="1004.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/separador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="173.0" fitWidth="221.0" layoutX="393.0" layoutY="889.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/estandar.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="476.0" layoutY="925.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ECG">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="501.0" layoutY="998.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR/Min">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text fx:id="hRECG" layoutX="446.0" layoutY="999.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text fx:id="pulso" layoutX="257.0" layoutY="1049.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="255.0" layoutY="980.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mmHg">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="173.0" fitWidth="221.0" layoutX="625.0" layoutY="889.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/estandar.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="715.0" layoutY="928.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SpO">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text fx:id="spO2" layoutX="699.0" layoutY="993.0" strokeType="OUTSIDE" strokeWidth="0.0" text="95%">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text fx:id="hRSpO2" layoutX="686.0" layoutY="1037.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+            <Text layoutX="730.0" layoutY="1036.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR/Min">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="peso" layoutX="1100.0" layoutY="889.0" mnemonicParsing="false" onAction="#tomarPeso" prefHeight="173.0" prefWidth="185.0">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Text fx:id="pesoLabel" layoutX="1153.0" layoutY="1002.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="1167.0" layoutY="932.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="173.0" fitWidth="221.0" layoutX="859.0" layoutY="889.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/estandar.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="944.0" layoutY="928.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESP ">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text fx:id="rESPFreq" layoutX="927.0" layoutY="1002.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Text>
+            <Text layoutX="982.0" layoutY="1000.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BrPM">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Text layoutX="1211.0" layoutY="999.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kg">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="173.0" fitWidth="418.0" layoutX="1299.0" layoutY="889.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/body.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="1450.0" layoutY="930.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body info">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Text layoutX="1314.0" layoutY="975.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grasa corporal" textAlignment="CENTER" wrappingWidth="95.265380859375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="1438.0" layoutY="988.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="1517.0" layoutY="975.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masa muscular" textAlignment="CENTER" wrappingWidth="99.9107666015625">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text layoutX="1652.0" layoutY="988.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMC">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Text fx:id="grasaCorporal" layoutX="1343.0" layoutY="1041.0" strokeType="OUTSIDE" strokeWidth="0.0" text="18">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="porcentajeDeAgua" layoutX="1431.0" layoutY="1041.0" strokeType="OUTSIDE" strokeWidth="0.0" text="61%">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="masaMuscular" layoutX="1551.0" layoutY="1041.0" strokeType="OUTSIDE" strokeWidth="0.0" text="21">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="iMC" layoutX="1643.0" layoutY="1041.0" strokeType="OUTSIDE" strokeWidth="0.0" text="22,1">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="61.0" fitWidth="6.0" layoutX="1411.0" layoutY="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/separador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="6.0" layoutX="1509.0" layoutY="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/separador.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="6.0" layoutX="1620.0" layoutY="976.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosOndas/separador.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="1364.0" layoutY="786.0" onMouseReleased="#almacenarAfinamiento" strokeType="OUTSIDE" strokeWidth="0.0" text="Almacenar afinamiento">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

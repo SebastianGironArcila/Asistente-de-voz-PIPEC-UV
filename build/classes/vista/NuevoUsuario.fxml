@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.NuevoUsuarioController">
+   <top>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" layoutX="68.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fondoRegistro.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="40.0" layoutY="203.0" prefHeight="661.0" prefWidth="1710.0" />
+            <Pane layoutX="20.0" layoutY="203.0" prefHeight="768.0" prefWidth="1366.0">
+               <children>
+                  <Label layoutX="1155.0" layoutY="268.0" text="Contraseña">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1154.0" layoutY="374.0" text="Confirmar contraseña">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="contrasenia" layoutX="1179.0" layoutY="303.0" prefHeight="70.0" prefWidth="360.0" />
+                  <PasswordField fx:id="contrasenia2" layoutX="1179.0" layoutY="407.0" prefHeight="70.0" prefWidth="360.0" />
+                  <Button fx:id="crearUsuario" layoutX="1221.0" layoutY="497.0" mnemonicParsing="false" onAction="#CrearUsuario" prefHeight="92.0" prefWidth="263.0" text="Crear usuario">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonBack" layoutX="105.0" layoutY="560.0" mnemonicParsing="false" onAction="#irAtras" prefHeight="100.0" prefWidth="100.0" />
+                  <Label layoutX="994.0" layoutY="-198.0" text="Datos de usuario">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1154.0" layoutY="-55.0" text="Nombre">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1154.0" layoutY="53.0" text="Teléfono">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1154.0" layoutY="156.0" text="Identificación">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ajustesIdentificacion" layoutX="1179.0" layoutY="193.0" prefHeight="70.0" prefWidth="360.0" />
+                  <TextField fx:id="ajustesTelefono" layoutX="1179.0" layoutY="83.0" prefHeight="70.0" prefWidth="360.0" />
+                  <TextField fx:id="ajustesNombre" layoutX="1179.0" layoutY="-23.0" prefHeight="70.0" prefWidth="360.0" />
+                  <ImageView fitHeight="256.0" fitWidth="256.0" layoutX="660.0" layoutY="-55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/administrator.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="1054.0" layoutY="45.0" text="Usuario">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ajustesUsuario" layoutX="1058.0" layoutY="77.0" prefHeight="70.0" prefWidth="290.0" />
+            <Label layoutX="1372.0" layoutY="45.0" text="Tipo de usuario">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="tipoUsuario" layoutX="1375.0" layoutY="77.0" prefHeight="70.0" prefWidth="290.0" />
+            <Label layoutX="186.0" layoutY="100.0" text="Usuario del administrador">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loginUsuario" layoutX="261.0" layoutY="158.0" prefHeight="70.0" prefWidth="360.0" />
+            <Label layoutX="105.0" layoutY="15.0" text="Credencial de administrador">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="186.0" layoutY="259.0" text="Usuario del administrador">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="loginPassword" layoutX="261.0" layoutY="318.0" prefHeight="70.0" prefWidth="360.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

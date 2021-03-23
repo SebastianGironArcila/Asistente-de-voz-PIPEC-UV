@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.EstructuraBasicaController">
+   <top>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="1070.0" fitWidth="1920.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FondoOndas.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="currentSectionImage" fitHeight="170.0" fitWidth="170.0" layoutX="29.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosActual/datosPersonas.png" />
+               </image></ImageView>
+            <Button fx:id="buttonHome" layoutX="250.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAHome" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSave" layoutX="365.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAGuardar" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonConnection" layoutX="480.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAConexion" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonHelp" layoutX="596.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAAyuda" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSmartcard" layoutX="711.0" layoutY="23.0" mnemonicParsing="false" onAction="#irASmartcard" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonBack" layoutX="52.0" layoutY="960.0" mnemonicParsing="false" onAction="#irAtras" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonWavesSection" layoutX="1789.0" layoutY="70.0" mnemonicParsing="false" onAction="#irAOndas" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPressureSection" layoutX="1787.0" layoutY="284.0" mnemonicParsing="false" onAction="#irAAfinamiento" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPersonalData" layoutX="1791.0" layoutY="492.0" mnemonicParsing="false" onAction="#irADatosPersonales" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonFamilyHistory" layoutX="1789.0" layoutY="702.0" mnemonicParsing="false" onAction="#irAHistorialFamiliar" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonConfiguration" layoutX="1788.0" layoutY="909.0" mnemonicParsing="false" onAction="#irAAjustes" prefHeight="100.0" prefWidth="100.0" />
+            <AnchorPane layoutX="40.0" layoutY="203.0" prefHeight="768.0" prefWidth="1710.0" />
+            <Pane layoutX="20.0" layoutY="203.0" prefHeight="768.0" prefWidth="1710.0">
+               <children>
+                  <Button fx:id="tomarPresionOndas" layoutX="1060.0" layoutY="739.0" mnemonicParsing="false" prefHeight="127.0" prefWidth="295.0" text="Presión arterial: 120/80" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnIniciarSenales" layoutX="1396.0" layoutY="140.0" mnemonicParsing="false" onAction="#medicionSimple" prefHeight="64.0" prefWidth="280.0" text="Iniciar medición simple">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="iniciarPersonalizada" layoutX="1397.0" layoutY="613.0" mnemonicParsing="false" onAction="#medicionPersonalizada" prefHeight="64.0" prefWidth="280.0" text="Iniciar medición personalizada">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="intervalo" layoutX="1398.0" layoutY="244.0" prefHeight="50.0" prefWidth="275.0" />
+                  <Label layoutX="1399.0" layoutY="212.0" prefHeight="34.0" prefWidth="274.0" text="Intérvalo entre muestras:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1398.0" layoutY="307.0" prefHeight="34.0" prefWidth="277.0" text="Duracion de cada muestra:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="duracionMuestra" layoutX="1398.0" layoutY="338.0" prefHeight="50.0" prefWidth="275.0" />
+                  <Label layoutX="1400.0" layoutY="404.0" prefHeight="34.0" prefWidth="214.0" text="Duración examen:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="duracionExamen" layoutX="1398.0" layoutY="435.0" prefHeight="50.0" prefWidth="275.0" />
+                  <TextArea fx:id="detallesMedicion" layoutX="1395.0" prefHeight="134.0" prefWidth="281.0" wrapText="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="1403.0" layoutY="498.0" text="Intervalo submuestreo:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choiceIntervaloSubmuestreo" layoutX="1398.0" layoutY="529.0" prefHeight="50.0" prefWidth="275.0" />
+               </children>
+            </Pane>
+            <Button fx:id="cargarMedicionesAnteriores" layoutX="1351.0" layoutY="29.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="243.0" text="Cargar mediciones anteriores" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="play" layoutX="1069.0" layoutY="29.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="88.0" text="Play" />
+            <Button fx:id="pause" layoutX="1163.0" layoutY="29.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="88.0" text="Pause" />
+            <Button fx:id="stop" layoutX="1257.0" layoutY="29.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="88.0" text="Stop" />
+            <Text layoutX="337.0" layoutY="994.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR/Min (ECG)">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="hRECG" layoutX="411.0" layoutY="1038.0" strokeType="OUTSIDE" strokeWidth="0.0" text="91">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="599.0" layoutY="994.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\% SpO2">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="spO2" layoutX="630.0" layoutY="1038.0" strokeType="OUTSIDE" strokeWidth="0.0" text="95%">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="848.0" layoutY="993.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HR/Min (SpO2)">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="hRSpO2" layoutX="921.0" layoutY="1038.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="750.0" layoutY="993.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BPM" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="BPM" layoutX="765.0" layoutY="1036.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="1389.0" layoutY="998.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heartbeat">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="heartbeat" layoutX="1433.0" layoutY="1053.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Text layoutX="1571.0" layoutY="974.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AVG pressure" textAlignment="CENTER" wrappingWidth="130.03125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="avgPressure" layoutX="1615.0" layoutY="1053.0" strokeType="OUTSIDE" strokeWidth="0.0" text="96">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Text>
+            <Label layoutX="1413.0" layoutY="166.0" prefHeight="34.0" prefWidth="198.0" text="Detalles medición:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

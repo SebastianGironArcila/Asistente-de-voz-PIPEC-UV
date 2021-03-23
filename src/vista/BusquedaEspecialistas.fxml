@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.BusquedaEspecialistasController">
+   <bottom>
+      <AnchorPane prefHeight="609.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="infoBusqueda" layoutX="48.0" layoutY="31.0" onKeyReleased="#buscarPersonalizado" prefHeight="60.0" prefWidth="1120.0" text="Ingrese el nombre del especialista o su especialidad" />
+            <TableView fx:id="tabla" layoutX="48.0" layoutY="107.0" prefHeight="462.0" prefWidth="1120.0">
+              <columns>
+                  <TableColumn fx:id="nombre" prefWidth="294.0" text="Nombre" />
+                  <TableColumn fx:id="especialidad" prefWidth="283.0" text="Especialidad" />
+                  <TableColumn fx:id="direccion" prefWidth="278.0" text="Dirección" />
+                  <TableColumn fx:id="telefono" prefWidth="264.0" text="Teléfono" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

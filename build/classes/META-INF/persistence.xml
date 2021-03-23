@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="PipecPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>BD.Medicamentos</class>
+    <class>BD.HistorialAfinamiento</class>
+    <class>BD.Antecedentespersonales</class>
+    <class>BD.Medicion</class>
+    <class>BD.Administradoras</class>
+    <class>BD.Usuarios</class>
+    <class>BD.Pacientes</class>
+    <class>BD.HistorialParametros</class>
+    <class>BD.Antecedentesfamiliares</class>
+    <class>BD.Municipios</class>
+    <class>BD.Cie10</class>
+    <class>BD.Departamentos</class>
+    <class>BD.Examenfisico</class>
+    <class>BD.MedicionPersonalizada</class>
+    <class>BD.Cups</class>
+    <class>BD.Prestadores</class>
+    <class>BD.Centrosmedicos</class>
+    <class>BD.Especialistas</class>
+    <class>BD.Farmacias</class>
+    <class>BD.Centromedico</class>
+    <class>BD.EntrenamientoAsistente</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/kiosko?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="kiosko"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="kiosko"/>
+    </properties>
+  </persistence-unit>
+</persistence>

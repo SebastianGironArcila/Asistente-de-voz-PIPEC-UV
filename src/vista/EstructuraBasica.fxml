@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.EstructuraBasicaController">
+   <top>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="1070.0" fitWidth="1920.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/EstructuraBasica.png" />
+               </image></ImageView>
+            <Button fx:id="buttonHome" layoutX="250.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAHome" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSave" layoutX="365.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAGuardar" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonConnection" layoutX="480.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAConexion" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonHelp" layoutX="596.0" layoutY="23.0" mnemonicParsing="false" onAction="#irAAyuda" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonSmartcard" layoutX="712.0" layoutY="23.0" mnemonicParsing="false" onAction="#iniciarDesdeTarjeta" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonBack" layoutX="52.0" layoutY="999.0" mnemonicParsing="false" onAction="#irAtras" prefHeight="61.0" prefWidth="85.0" />
+            <Button fx:id="buttonWavesSection" layoutX="1758.0" layoutY="155.0" mnemonicParsing="false" onAction="#irAOndas" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPressureSection" layoutX="1758.0" layoutY="293.0" mnemonicParsing="false" onAction="#irAAfinamiento" prefHeight="100.0" prefWidth="100.0" />
+            <Button fx:id="buttonPersonalData" layoutX="1758.0" layoutY="432.0" mnemonicParsing="false" onAction="#volverAca" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonVariabilidad" layoutX="1758.0" layoutY="571.0" mnemonicParsing="false" onAction="#irAVariabilidad" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonConfiguration" layoutX="1758.0" layoutY="847.0" mnemonicParsing="false" onAction="#irAAjustes" prefHeight="100.0" prefWidth="100.0" />
+            <AnchorPane layoutX="40.0" layoutY="203.0" prefHeight="768.0" prefWidth="1710.0" />
+            <Pane layoutX="14.0" layoutY="182.0" prefHeight="768.0" prefWidth="1710.0">
+               <children>
+                  <GridPane prefHeight="422.0" prefWidth="807.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.33335876464844" minWidth="10.0" prefWidth="226.6666717529297" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.3333435058594" minWidth="0.0" prefWidth="325.3333282470703" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="205.33331298828125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="10.0" prefWidth="265.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labIdentificacion1" text="Id" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labNombre1" text="Primer nombre" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labApellido1" text="Segundo nombre" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textIdentificacion1" prefHeight="80.0" prefWidth="331.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textNombre1" prefHeight="72.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textNombre2" prefHeight="62.0" prefWidth="272.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="labAdministradora" text="Administradora " textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labNombre2" text="Primer apellido" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labApellido2" text="Segundo apellido" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textAdministradora" prefHeight="78.0" prefWidth="270.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textApellido1" prefHeight="69.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textApellido2" prefHeight="60.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <Label fx:id="labTipoIdentificacion1" text="Tipo id" textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="cboxTipoIdentificacion" prefHeight="84.0" prefWidth="272.0" stylesheets="@choiceBox.css" GridPane.columnIndex="1" />
+                        <Label text="Acepto los términos del consentimiento informado" wrapText="true" GridPane.columnIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane id="datosPacientes" alignment="CENTER" layoutX="864.0" layoutY="23.0" prefHeight="387.0" prefWidth="814.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.9999694824219" minWidth="0.0" prefWidth="162.6666717529297" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="549.0" minWidth="10.0" prefWidth="265.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="633.0" minWidth="7.0" prefWidth="108.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="753.3333129882812" minWidth="0.0" prefWidth="265.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labTelefonoFijo" text="Teléfono" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labDepartamento" text="Departamento" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labCelular" text="Celular " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labGenero" text="Género " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labMunicipio" text="Municipio " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labDireccion" text="Dirección " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labFechaNacimiento" text="Fecha de nacimiento" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labZona" text="Zona" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Altura (cm)" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textDepartamento" prefHeight="58.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textMunicipio" prefHeight="60.0" prefWidth="702.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textTelefonoFijo" prefHeight="53.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textCelular" prefHeight="58.0" prefWidth="261.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textDireccion" prefHeight="61.0" prefWidth="622.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textEstatura" prefHeight="64.0" prefWidth="622.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker fx:id="datePickerFechaNacimiento" nodeOrientation="LEFT_TO_RIGHT" prefHeight="64.0" prefWidth="339.0" stylesheets="@datePicker.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="textGenero" prefHeight="69.0" prefWidth="317.0" stylesheets="@choiceBox.css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="textZona" prefHeight="61.0" prefWidth="319.0" stylesheets="@choiceBox.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Tipo de sangre" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Raza" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="grupoSanguineo" prefHeight="64.0" prefWidth="318.0" stylesheets="@choiceBox.css" GridPane.columnIndex="1" />
+                        <ChoiceBox fx:id="raza" prefHeight="70.0" prefWidth="318.0" stylesheets="@choiceBox.css" GridPane.columnIndex="3" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutY="460.0" prefHeight="290.0" prefWidth="1163.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="163.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="9.0" prefWidth="190.33334350585938" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="109.66665649414062" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="351.0" minWidth="10.0" prefWidth="256.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="138.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.0" minWidth="10.0" prefWidth="239.3333740234375" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="labMedicamentosPermanentes1" prefHeight="58.0" prefWidth="165.0" text="            Medicamento 1  " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labMedicamentosPermanentes2" text=" Medicamento 2  " textAlignment="CENTER" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labMedicamentosPermanentes3" text="Medicamento 3  " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labMedicamentosPermanentes4" text="Medicamento 4  " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labMedicamentosPermanentes5" text="Medicamento 5  " textAlignment="RIGHT" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labOtrasSustancias1" text="Otras sustancias 1" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labOtrasSustancias2" text="Otras sustancias 2" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labOtrasSustancias3" text="Otras sustancias 3" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labActividadFisicaMinutos" prefHeight="58.0" prefWidth="162.0" text="Actividad física (semanal)" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labSumaDias" text="Cada cupanto fuma (días)" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labConviveConFumadores" text="Vive con fumadores" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textMedicamentosPermanentes1" prefHeight="47.0" prefWidth="160.0" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textMedicamentosPermanentes2" prefHeight="47.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textMedicamentosPermanentes3" prefHeight="47.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textMedicamentosPermanentes4" prefHeight="47.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textMedicamentosPermanentes5" prefHeight="47.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="textOtrasSustancias1" prefHeight="47.0" GridPane.columnIndex="3" />
+                        <TextField fx:id="textOtrasSustancias2" prefHeight="47.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="textOtrasSustancias3" prefHeight="47.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label fx:id="labDiabetes" text="Diabetes " textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labHipertension" text="Hipertensión" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labConsumeLicor" text="Consume licor (días)" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labInfartos" text="Ataques cardiacos" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="textDiabetes" prefHeight="47.0" prefWidth="253.0" stylesheets="@choiceBox.css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <ChoiceBox fx:id="textHipertension" prefHeight="47.0" prefWidth="257.0" stylesheets="@choiceBox.css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <ChoiceBox fx:id="textConviveConFumadores" prefHeight="47.0" prefWidth="248.0" stylesheets="@choiceBox.css" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <ChoiceBox fx:id="textActividadFisicaMinutos" prefHeight="47.0" prefWidth="294.0" stylesheets="@choiceBox.css" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Spinner fx:id="textCosumeLicor" prefHeight="56.0" prefWidth="292.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                        <Spinner fx:id="textInfartos" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="5" />
+                        <Spinner fx:id="textFumaDias" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="1231.0" layoutY="449.0" text="Historial familiar">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="1222.0" layoutY="493.0" prefHeight="274.0" prefWidth="523.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="112.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="383.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="86.0" text="Diabetes" textAlignment="RIGHT">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="28.0" prefWidth="147.0" text="    Hipertensión" textAlignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="58.0" prefWidth="140.0" text="Ataques cardiacos " textAlignment="RIGHT" wrapText="true" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="28.0" prefWidth="74.0" text="ACV" textAlignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="familiaresDiabetes" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="1" />
+                        <Spinner fx:id="familiaresHipertension" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Spinner fx:id="familiaresInfartos" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Spinner fx:id="familiaresACV" prefHeight="56.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Button fx:id="consultaCentrosMedicos" layoutX="824.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirCentrosMedicos" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="consultarFarmacias" layoutX="1162.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirFarmacias" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="consultaEspecialistas" layoutX="1048.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirEspecialistas" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button layoutX="946.0" layoutY="997.0" mnemonicParsing="false" onAction="#guardarPaciente" prefHeight="61.0" prefWidth="181.0" text="Guardar" />
+            <Button layoutX="1148.0" layoutY="997.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="61.0" prefWidth="181.0" text="Limpiar campos" />
+            <Button layoutX="1355.0" layoutY="998.0" mnemonicParsing="false" onAction="#llenarPaciente" prefHeight="60.0" prefWidth="174.0" text="Recargar datos" />
+            <Button fx:id="buttonWearables" layoutX="1758.0" layoutY="709.0" mnemonicParsing="false" onAction="#irAWearables" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="medicionesAnteriores" layoutX="1279.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirMedicionesAnteriores" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            <ImageView fx:id="imagenUsuario" fitHeight="150.0" fitWidth="200.0" layoutX="-1.0" layoutY="-2.0" onMouseReleased="#abrirAdminSesion" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/iconosEstructura/usuario.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="medicamentos" layoutX="937.0" layoutY="23.0" mnemonicParsing="false" onAction="#abrirMedicamentos" prefHeight="100.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

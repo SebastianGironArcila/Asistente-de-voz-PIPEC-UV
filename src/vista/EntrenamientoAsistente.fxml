@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.EntrenamientoAsistenteController">
+   <bottom>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tablaOpciones" layoutX="72.0" layoutY="52.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="52.0">
+               <columns>
+                  <TableColumn fx:id="numero" prefWidth="61.0" text="Numero" />
+                  <TableColumn fx:id="funcion" prefWidth="201.0" text="Funcion" />
+                  <TableColumn fx:id="frases" prefWidth="452.0" text="Frases" />
+               </columns>
+            </TableView>
+            <TextField fx:id="fraseNueva" layoutX="203.0" layoutY="504.0" prefHeight="65.0" prefWidth="378.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="crearGestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDispositivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="crearGestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="crearGestorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarGestor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDispositivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarGestorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BuscarGestorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarDatosMedicos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarDatosMedicosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecibirDatosMedicos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirDatosMedicosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibirDatosMedicosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarOrdenes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarOrdenesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecibirOrdenes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirOrdenesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibirOrdenesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTestigoPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTestigoPacienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecibirTestigoPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirTestigoPacienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibirTestigoPacienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTestigoMedico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="datos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarTestigoMedicoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RecibirTestigoMedico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="gestor" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecibirTestigoMedicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecibirTestigoMedicoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="crearGestorSoapIn">
+    <wsdl:part name="parameters" element="tns:crearGestor" />
+  </wsdl:message>
+  <wsdl:message name="crearGestorSoapOut">
+    <wsdl:part name="parameters" element="tns:crearGestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarGestorSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarGestor" />
+  </wsdl:message>
+  <wsdl:message name="BuscarGestorSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarGestorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarDatosMedicosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarDatosMedicos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarDatosMedicosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarDatosMedicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibirDatosMedicosSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirDatosMedicos" />
+  </wsdl:message>
+  <wsdl:message name="RecibirDatosMedicosSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirDatosMedicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarOrdenesSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarOrdenes" />
+  </wsdl:message>
+  <wsdl:message name="EnviarOrdenesSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarOrdenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibirOrdenesSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirOrdenes" />
+  </wsdl:message>
+  <wsdl:message name="RecibirOrdenesSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirOrdenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTestigoPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarTestigoPaciente" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTestigoPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarTestigoPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibirTestigoPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirTestigoPaciente" />
+  </wsdl:message>
+  <wsdl:message name="RecibirTestigoPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirTestigoPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTestigoMedicoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarTestigoMedico" />
+  </wsdl:message>
+  <wsdl:message name="EnviarTestigoMedicoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarTestigoMedicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecibirTestigoMedicoSoapIn">
+    <wsdl:part name="parameters" element="tns:RecibirTestigoMedico" />
+  </wsdl:message>
+  <wsdl:message name="RecibirTestigoMedicoSoapOut">
+    <wsdl:part name="parameters" element="tns:RecibirTestigoMedicoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="crearGestor">
+      <wsdl:input message="tns:crearGestorSoapIn" />
+      <wsdl:output message="tns:crearGestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGestor">
+      <wsdl:input message="tns:BuscarGestorSoapIn" />
+      <wsdl:output message="tns:BuscarGestorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarDatosMedicos">
+      <wsdl:input message="tns:EnviarDatosMedicosSoapIn" />
+      <wsdl:output message="tns:EnviarDatosMedicosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirDatosMedicos">
+      <wsdl:input message="tns:RecibirDatosMedicosSoapIn" />
+      <wsdl:output message="tns:RecibirDatosMedicosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarOrdenes">
+      <wsdl:input message="tns:EnviarOrdenesSoapIn" />
+      <wsdl:output message="tns:EnviarOrdenesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirOrdenes">
+      <wsdl:input message="tns:RecibirOrdenesSoapIn" />
+      <wsdl:output message="tns:RecibirOrdenesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoPaciente">
+      <wsdl:input message="tns:EnviarTestigoPacienteSoapIn" />
+      <wsdl:output message="tns:EnviarTestigoPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoPaciente">
+      <wsdl:input message="tns:RecibirTestigoPacienteSoapIn" />
+      <wsdl:output message="tns:RecibirTestigoPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoMedico">
+      <wsdl:input message="tns:EnviarTestigoMedicoSoapIn" />
+      <wsdl:output message="tns:EnviarTestigoMedicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoMedico">
+      <wsdl:input message="tns:RecibirTestigoMedicoSoapIn" />
+      <wsdl:output message="tns:RecibirTestigoMedicoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="crearGestor">
+      <soap:operation soapAction="http://tempuri.org/crearGestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGestor">
+      <soap:operation soapAction="http://tempuri.org/BuscarGestor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarDatosMedicos">
+      <soap:operation soapAction="http://tempuri.org/EnviarDatosMedicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirDatosMedicos">
+      <soap:operation soapAction="http://tempuri.org/RecibirDatosMedicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarOrdenes">
+      <soap:operation soapAction="http://tempuri.org/EnviarOrdenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirOrdenes">
+      <soap:operation soapAction="http://tempuri.org/RecibirOrdenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoPaciente">
+      <soap:operation soapAction="http://tempuri.org/EnviarTestigoPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoPaciente">
+      <soap:operation soapAction="http://tempuri.org/RecibirTestigoPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoMedico">
+      <soap:operation soapAction="http://tempuri.org/EnviarTestigoMedico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoMedico">
+      <soap:operation soapAction="http://tempuri.org/RecibirTestigoMedico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="crearGestor">
+      <soap12:operation soapAction="http://tempuri.org/crearGestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarGestor">
+      <soap12:operation soapAction="http://tempuri.org/BuscarGestor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarDatosMedicos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarDatosMedicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirDatosMedicos">
+      <soap12:operation soapAction="http://tempuri.org/RecibirDatosMedicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarOrdenes">
+      <soap12:operation soapAction="http://tempuri.org/EnviarOrdenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirOrdenes">
+      <soap12:operation soapAction="http://tempuri.org/RecibirOrdenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoPaciente">
+      <soap12:operation soapAction="http://tempuri.org/EnviarTestigoPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoPaciente">
+      <soap12:operation soapAction="http://tempuri.org/RecibirTestigoPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarTestigoMedico">
+      <soap12:operation soapAction="http://tempuri.org/EnviarTestigoMedico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirTestigoMedico">
+      <soap12:operation soapAction="http://tempuri.org/RecibirTestigoMedico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://pipec.somee.com/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://pipec.somee.com/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

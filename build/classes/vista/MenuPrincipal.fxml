@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuPrincipalController">
+   <bottom>
+      <AnchorPane prefHeight="768.0" prefWidth="1366.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MenuPrincipal.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ajustesMenuPrincipal" layoutX="344.0" layoutY="522.0" mnemonicParsing="false" onAction="#irAAjustes" prefHeight="163.0" prefWidth="163.0" />
+            <Button fx:id="afinamientoMenuPrincipal" layoutX="904.0" layoutY="283.0" mnemonicParsing="false" onAction="#irAAfinamiento" prefHeight="163.0" prefWidth="163.0" />
+            <Button fx:id="personalesMenuPrincipal" layoutX="856.0" layoutY="522.0" mnemonicParsing="false" onAction="#irADatosPersonales" prefHeight="163.0" prefWidth="163.0" />
+            <Button fx:id="ondasMenuPrincipal" layoutX="750.0" layoutY="74.0" mnemonicParsing="false" onAction="#irAOndas" prefHeight="163.0" prefWidth="163.0" />
+            <Button fx:id="wearablesMenuPrincipal" layoutX="455.0" layoutY="74.0" mnemonicParsing="false" prefHeight="163.0" prefWidth="163.0" />
+            <Button fx:id="variabilidadMenuPrincipal" layoutX="292.0" layoutY="271.0" mnemonicParsing="false" prefHeight="163.0" prefWidth="163.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

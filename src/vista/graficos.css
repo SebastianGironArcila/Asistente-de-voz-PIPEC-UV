@@ -1,0 +1,19 @@
+.chart {
+
+    -fx-background-image: url("/images/cuadriculaOndas.png");
+}
+
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.axis-tick-mark {
+    -fx-stroke: transparent;
+}
+.axis-minor-tick-mark {
+    -fx-stroke: transparent;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}

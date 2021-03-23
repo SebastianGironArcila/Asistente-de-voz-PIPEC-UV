@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.AdminSesionController">
+   <top>
+      <AnchorPane prefHeight="928.0" prefWidth="1642.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="1016.0" fitWidth="1650.0" layoutX="68.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane layoutX="40.0" layoutY="203.0" prefHeight="661.0" prefWidth="1710.0" />
+            <Pane layoutX="51.0" prefHeight="850.0" prefWidth="1646.0">
+               <children>
+                  <Button fx:id="botonCambiarFoto" layoutX="486.0" layoutY="73.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="botonSalir" layoutX="723.0" layoutY="73.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
+                  <Button fx:id="botonCerrar" layoutX="960.0" layoutY="73.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" />
+                  <Label layoutX="503.0" layoutY="282.0" prefHeight="68.0" prefWidth="166.0" text="Cargar paciente" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="740.0" layoutY="282.0" prefHeight="68.0" prefWidth="166.0" text="Salir de la aplicación" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1008.0" layoutY="282.0" prefHeight="68.0" prefWidth="105.0" text="Cerrar sesión" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

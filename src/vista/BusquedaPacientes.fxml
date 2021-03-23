@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.BusquedaPacientesController">
+   <bottom>
+      <AnchorPane prefHeight="609.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="infoBusqueda" layoutX="48.0" layoutY="31.0" onKeyReleased="#buscarPersonalizado" prefHeight="60.0" prefWidth="1120.0" text="Ingrese identificación o nombre" />
+            <TableView fx:id="tablaPacientes" layoutX="48.0" layoutY="107.0" prefHeight="401.0" prefWidth="1120.0">
+              <columns>
+                  <TableColumn fx:id="primerApellido" prefWidth="294.0" text="Primer apellido" />
+                  <TableColumn fx:id="segundoApellido" prefWidth="283.0" text="Segundo apellido" />
+                  <TableColumn fx:id="tercerApellido" prefWidth="278.0" text="Primer nombre" />
+                  <TableColumn fx:id="cuartoApellido" prefWidth="264.0" text="Segundo nombre" />
+              </columns>
+            </TableView>
+            <Button fx:id="buttonOk" layoutX="1098.0" layoutY="516.0" mnemonicParsing="false" onAction="#cargarPaciente" prefHeight="70.0" prefWidth="70.0" text="Ok" />
+            <Button fx:id="buttonCancel" layoutX="1007.0" layoutY="516.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="70.0" prefWidth="70.0" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
